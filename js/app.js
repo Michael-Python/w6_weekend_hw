@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const form = document.querySelector('#form');
         // add the action of submit to the event listener 
         form.addEventListener('submit', handleFormSubmit)
+        const button = document.querySelector('#dButton')
+        button.addEventListener('click', handleButtonClick);
     })
     // 
 
@@ -26,3 +28,10 @@ const handleFormSubmit = function(event) {
     memberList.appendChild(newListItem2);
     memberList.appendChild(newListItem3);
 };
+
+const handleButtonClick = function(event) {
+    // getElementById looks in the html page for that id and then the part for remove removes that id.
+    const dButton = document.getElementById('form-result');
+    console.log('Delete button clicked');
+    dButton.remove();
+}
