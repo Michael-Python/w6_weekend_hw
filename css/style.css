@@ -3,16 +3,6 @@ body {
     margin: 30px
   }
 
-  .member-list-item {
-    background: #ddeaff;
-    list-style-type: none;
-    display: flex;
-    border-radius: 5%;
-    flex-direction: column;
-    border-style: solid;
-    padding: 1em;
-    width: 23%;
-}
 
 #button {
     background-color: DodgerBlue; /* Blue background */
@@ -33,11 +23,30 @@ body {
 #form-result {
     background: #ddeaff;
     list-style-type: none;
-    /* This puts each of the form submissions in a flex box */
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "ul ul ul";
     padding: 1em;
-    width: 100%;
-    
-    justify-content: space-between;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
 }
+
+.member-list-item {
+    background: #ddeaff;
+    list-style-type: none;
+    display: flex;
+    border-radius: 5%;
+    flex-direction: column;
+    border-style: solid;
+    padding: 10px
+}
+/* .member-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "form form form form";
+    padding: 1em;
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+} */
