@@ -26,13 +26,16 @@ const createMemberListItem = function(form) {
     const newListItem1 = document.createElement('h2');
     newListItem1.textContent = `Superhero Name: ${form.code_name.value}.`;
     memberListItem.appendChild(newListItem1);
+
     const newListItem2 = document.createElement('h3');
     newListItem2.textContent = `Superhero Power: ${form.superpower.value }.`;
     memberListItem.appendChild(newListItem2);
+    
     const newListItem3 = document.createElement('p');
     newListItem3.textContent = `Years of experience: ${form.experience.value }.`;
     memberListItem.appendChild(newListItem3);
     const newListItem4 = document.createElement('i');
+    
     newListItem4.textContent = `The logo style you chose is: ${form.logo.value }.`;    
     memberListItem.appendChild(newListItem4);
     return memberListItem;

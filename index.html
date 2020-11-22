@@ -16,32 +16,40 @@
     <h2>Membership Form</h2>
     <form id="form">
         <p>
-            <h3><label for="code_name">Enter your preferred superhero name:</label></h3>
-            <input type="text" id="code_name">
+            <div class="member-item">
+                <h3><label for="code_name" class="primary">Enter your preferred superhero name:</label></h3>
+                <input type="text" id="code_name">
+            </div>
         </p>
         <p>
-            <h3><label for="super_power">Enter a brief description of your power:</label></h3>
-            <input type="text" id="superpower">
+            <div class="member-item">
+                <h3><label for="super_power" class="primary">Enter a brief description of your power:</label></h3>
+                <input type="text" id="superpower">
+            </div>
         </p>
         <p>
-            <h3><label for="experience">Enter the number of completed years of service:</label></h3>
-            <input type="text" id="experience">
+            <div class="member-item">
+                <h3><label for="experience" class="primary">Enter the number of completed years of service:</label></h3>
+                <input type="text" id="experience">
+            </div>
         </p>
         <p>
-            <h3><label for="logo" class=primary">Logo Style</label></h3>
-            <select name="logo" id="logo">
-                <option value="Lots of black and really dark grey">Dark and Brooding</option>
-                <option value="Enough to brighten your day">Full of hope</option>
-                <option value="You do not want to *&^^&!!$ with me">Go with Strength</option>
+            <div class="member-item">
+                <h3><label for="logo" class=primary">Logo Style</label></h3>
+                <select name="logo" id="logo">
+                    <option value="Lots of black and really dark grey">Dark and Brooding</option>
+                    <option value="Enough to brighten your day">Full of hope</option>
+                    <option value="In your face and loud">Go with Strength</option>
 
-            </select>
+                </select>
+            </div>
         </p>
 
         <button type="submit" id="button"><i class="fa fa-send-o"></i></button>
     </form>
     <p><h2>List of requests:</h2></p>
-    <p id="form-result">
-    </p>
+    <ul id="form-result">
+    </ul></p>
     <br><button id="dButton" type="button"><i class="fa fa-trash"></i>
     </button>
 
