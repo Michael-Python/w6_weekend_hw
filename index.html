@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Justice League Members</title>
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +28,7 @@
             <input type="text" id="experience">
         </p>
         <p>
-            <label for="logo" class=primary">Logo Style</label>
+            <h3><label for="logo" class=primary">Logo Style</label></h3>
             <select name="logo" id="logo">
                 <option value="Lots of black and really dark grey">Dark and Brooding</option>
                 <option value="Enough to brighten your day">Full of hope</option>
@@ -36,13 +37,14 @@
             </select>
         </p>
 
-        <button type="submit" id="submit_info">Submit Request</button>
+        <button type="submit" id="button"><i class="fa fa-send-o"></i></button>
     </form>
-    <button id="dButton" type="button">Clear the list
-        </button>
     <p><h2>List of requests:</h2></p>
     <p id="form-result">
     </p>
+    <br><button id="dButton" type="button"><i class="fa fa-trash"></i>
+    </button>
+
 </body>
 
 </html>
