@@ -14,19 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const handleFormSubmit = function(event) {
     event.preventDefault();
-    console.log(event);
-    // const resultParagph = document.querySelector('#form-result');
-    const newListItem1 = document.createElement('li');
-    newListItem1.textContent = `Superhero Name ${event.target.code_name.value}.`;
+    const memberListItem = createMemberListItem(event.target)
+    const memberList = document.querySelector('#form-result');
+    memberList.appendChild(memberListItem);
+}
 
-    const newListItem2 = document.createElement('li');
-    newListItem2.textContent = `Superhero Power ${event.target.superpower.value }.`;
-    const newListItem3 = document.createElement('li');
-    newListItem3.textContent = `Years of experience ${event.target.experience.value }.`;
-    memberList = document.querySelector('#form-result');
-    memberList.appendChild(newListItem1);
-    memberList.appendChild(newListItem2);
-    memberList.appendChild(newListItem3);
+const createMemberListItem = function(form) {
+    const memberListItem = document.createElement('li');
+    memberListItem.classList.add('member-list-item')
+
+    const newListItem1 = document.createElement('h2');
+    newListItem1.textContent = `Superhero Name: ${form.code_name.value}.`;
+    memberListItem.appendChild(newListItem1);
+    const newListItem2 = document.createElement('h3');
+    newListItem2.textContent = `Superhero Power: ${form.superpower.value }.`;
+    memberListItem.appendChild(newListItem2);
+    const newListItem3 = document.createElement('p');
+    newListItem3.textContent = `Years of experience: ${form.experience.value }.`;
+    memberListItem.appendChild(newListItem3);
+    // const newListItem4 = document.createElement('img');
+    // img src = `images/${form.logo.value}`
+    //     // because the actual list item stuff is being done in another function, you have to return the construct, or else memberList has nothing to append.
+    return memberListItem;
 };
 
 const handleButtonClick = function(event) {
