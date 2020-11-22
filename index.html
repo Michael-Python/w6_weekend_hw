@@ -27,14 +27,20 @@
             <input type="text" id="experience">
         </p>
         <p>
-            <select name="logo" id="logo">Select a logo for your hero.</select>
+            <label for="logo" class=primary">Logo Style</label>
+            <select name="logo" id="logo">
+                <option value="Lots of black and really dark grey">Dark and Brooding</option>
+                <option value="Enough to brighten your day">Full of hope</option>
+                <option value="You do not want to *&^^&!!$ with me">Go with Strength</option>
+
+            </select>
         </p>
 
         <button type="submit" id="submit_info">Submit Request</button>
     </form>
     <button id="dButton" type="button">Clear the list
         </button>
-    <p>List of requests:</p>
+    <p><h2>List of requests:</h2></p>
     <p id="form-result">
     </p>
 </body>

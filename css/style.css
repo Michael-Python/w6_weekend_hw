@@ -1,4 +1,7 @@
 .member-list-item {
     background: #ddeaff;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
+

@@ -32,9 +32,9 @@ const createMemberListItem = function(form) {
     const newListItem3 = document.createElement('p');
     newListItem3.textContent = `Years of experience: ${form.experience.value }.`;
     memberListItem.appendChild(newListItem3);
-    // const newListItem4 = document.createElement('img');
-    // img src = `images/${form.logo.value}`
-    //     // because the actual list item stuff is being done in another function, you have to return the construct, or else memberList has nothing to append.
+    const newListItem4 = document.createElement('i');
+    newListItem4.textContent = `The logo style you chose is: ${form.logo.value }.`;    
+    memberListItem.appendChild(newListItem4);
     return memberListItem;
 };
 
@@ -44,3 +44,4 @@ const handleButtonClick = function(event) {
     console.log('Delete button clicked');
     dButton.remove();
 }
+
